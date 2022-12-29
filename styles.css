@@ -1,28 +1,26 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 *{
     font-family: Century Gothic;
     box-sizing: border-box;
 }
 body {
     margin: 0px;
-    height: 100vh;
+    height: 100%;
+    margin: 0 auto;
     background: linear-gradient(140deg, #990027, #74057f, #9b9803, #18a8a3);
     background-size: 800% 800%;
     -webkit-animation: AnimationName 8s ease infinite;
     -moz-animation: AnimationName 8s ease infinite;
     -o-animation: AnimationName 8s ease infinite;
     animation: AnimationName 8s ease infinite;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: inline-block;
   }
   
   h1 {
     font-family: "Montserrat Medium";
-    font-size: 12px;
+    font-size: 15px;
+    color: aliceblue;
     width: auto;
-    margin: 20%;
+    margin: 10% 20% 100px 20%;
     text-align: center;
     transform: scale(0.94);
     animation: scale 5s forwards cubic-bezier(0.1, 1, 0.89, 1);
@@ -119,4 +117,78 @@ body {
     0%{background-position:70% 0%}
     50%{background-position:31% 100%}
     100%{background-position:70% 0%}
+}
+.player{
+  width: 300px;
+  height: 413px;
+  border-radius: 36px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-bottom:50px;
+  background: linear-gradient(130deg, #532e0a, #3d0147, #54010f);
+  background-size: 200% 200%;
+
+  -webkit-animation: Animation 3s ease infinite;
+  -moz-animation: Animation 3s ease infinite;
+  animation: Animation 3s ease infinite;
+}
+@-webkit-keyframes Animation {
+  0%{background-position:10% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation {
+  0%{background-position:10% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:10% 0%}
+}
+@keyframes Animation { 
+  0%{background-position:10% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:10% 0%}
+}
+.playerimg{
+  width: 300px;
+  height: 262px;
+  background: url(mylove.png);
+  border: 5px solid #CF6456;
+  box-shadow: 0px 10px 10px -5px rgba(207, 100, 86, 0.5);
+  border-radius: 33px;
+  transition: .5s linear;
+}
+.playerimg:hover{
+  transform: scale(1.1);
+}
+.player .playpause{
+  margin-top:20px;
+  margin-left: 85px;
+  width: 125px;
+  height: 125px;
+  cursor: pointer;
+  background: url(play.png);
+  background-blend-mode: lighten;
+  filter: drop-shadow(0px 0px 15px rgba(207, 100, 86, 0.5));
+  transition: .5s linear;
+}
+.player .playpause:hover{
+  transform: scale(1.1);
+}
+@media only screen and (max-width: 820px) {
+  .player{
+    width: 60%;
+    height: 713px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .playerimg{
+    width: 100%;
+    height: 400px;
+    margin: 0 auto;
+    background: url(mylove.png) no-repeat;
+    background-size:cover;
+  }
+  .player .playpause{
+    margin: 0 auto;
+    margin-top:60px;
+  }
 }

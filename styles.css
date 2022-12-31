@@ -18,7 +18,9 @@ body {
     font-size: 15px;
     color: aliceblue;
     width: 85%;
-    margin: 50px;
+    margin: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
     word-wrap: break-word;
   }
   
@@ -91,8 +93,11 @@ body {
   }
 .player{
   border-radius: 36px;
-  margin: 5% 20%;
-  
+  width: 90%;
+  max-width: 500px;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
   background: linear-gradient(130deg, #532e0a, #3d0147, #54010f);
   background-size: 200% 200%;
 
@@ -116,7 +121,7 @@ body {
   100%{background-position:10% 0%}
 }
 .playerimg{
-  width: 100%;
+  width:100%;
   height: 362px;
   background: url(mylove.png);
   background-size: cover;
@@ -147,5 +152,5 @@ body {
 .container{
   margin: 50px;
   display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
 }

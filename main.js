@@ -1,3 +1,9 @@
+var interval =5000;
+setTimeout(step,interval);
+function step(){
+    document.querySelector('.loading').style.display="none";
+}
+
 const audioplayer = document.querySelector('.audioplayer')
 const playpausebutton =document.querySelector('.playpause')
 let play =true;

@@ -159,9 +159,10 @@ body {
   transform: scale(1.1);
 }
 .container{
-  margin: 30px;
+  margin: 10px;
+  border: 1px solid black;
   display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
 }
 
 .voice-message-container{

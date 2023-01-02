@@ -47,10 +47,12 @@ playpause.addEventListener('click',()=>{
      playpause2.style.backgroundImage="url(playvoice.png)";
      playpause3.style.backgroundImage="url(playvoice.png)";
      playpause4.style.backgroundImage="url(playvoice.png)";
+     playpause5.style.backgroundImage="url(playvoice.png)";
      audio1.pause()
      audio2.pause()
      audio3.pause()
      audio4.pause()
+     audio5.pause()
     }
 else
     {
@@ -97,10 +99,12 @@ playpause1.addEventListener('click',()=>{
      playpause2.style.backgroundImage="url(playvoice.png)";
      playpause3.style.backgroundImage="url(playvoice.png)";
      playpause4.style.backgroundImage="url(playvoice.png)";
+     playpause5.style.backgroundImage="url(playvoice.png)";
      audio.pause()
      audio2.pause()
      audio3.pause()
      audio4.pause()
+     audio5.pause()
     }
 else
     {
@@ -147,10 +151,12 @@ playpause2.addEventListener('click',()=>{
      playpause.style.backgroundImage="url(playvoice.png)";
      playpause3.style.backgroundImage="url(playvoice.png)";
      playpause4.style.backgroundImage="url(playvoice.png)";
+     playpause5.style.backgroundImage="url(playvoice.png)";
      audio1.pause()
      audio.pause()
      audio3.pause()
      audio4.pause()
+     audio5.pause()
     }
 else
     {
@@ -197,10 +203,12 @@ playpause3.addEventListener('click',()=>{
      playpause2.style.backgroundImage="url(playvoice.png)";
      playpause.style.backgroundImage="url(playvoice.png)";
      playpause4.style.backgroundImage="url(playvoice.png)";
+     playpause5.style.backgroundImage="url(playvoice.png)";
      audio1.pause()
      audio2.pause()
      audio.pause()
      audio4.pause()
+     audio5.pause()
     }
 else
     {
@@ -247,10 +255,12 @@ playpause4.addEventListener('click',()=>{
      playpause2.style.backgroundImage="url(playvoice.png)";
      playpause3.style.backgroundImage="url(playvoice.png)";
      playpause.style.backgroundImage="url(playvoice.png)";
+     playpause5.style.backgroundImage="url(playvoice.png)";
      audio1.pause()
      audio2.pause()
      audio3.pause()
      audio.pause()
+     audio5.pause()
     }
 else
     {
@@ -272,4 +282,56 @@ else
   setInterval(() => {
     start4.innerHTML = conversion(audio4.currentTime)
     now4.style.width = audio4.currentTime / audio4.duration.toFixed(3) * 100 + '%'
+  }, 1000)
+
+  const audio5 = document.getElementById('music5')
+  const start5 = document.querySelector('.start5')
+  const end5 = document.querySelector('.end5')
+  const progressBar5 = document.querySelector('.progress-bar5')
+  const now5 = document.querySelector('.now5')
+ const playpause5=document.querySelector('.playpausevoice5')
+ let play6=true;
+
+  audio5.onloadedmetadata = function () {
+    end5.innerHTML = conversion(audio5.duration)
+    start5.innerHTML = conversion(audio5.currentTime)
+  }
+
+playpause5.addEventListener('click',()=>{
+    if(play6)
+    {
+    audio5.play();
+     play6=!play6;
+     playpause5.style.backgroundImage="url(pausevoice.png)";
+     playpause1.style.backgroundImage="url(playvoice.png)";
+     playpause2.style.backgroundImage="url(playvoice.png)";
+     playpause3.style.backgroundImage="url(playvoice.png)";
+     playpause.style.backgroundImage="url(playvoice.png)";
+     playpause4.style.backgroundImage="url(playvoice.png)";
+     audio1.pause()
+     audio2.pause()
+     audio3.pause()
+     audio.pause()
+     audio4.pause()
+    }
+else
+    {
+    audio5.pause();
+    play6=!play6;
+    playpause5.style.backgroundImage="url(playvoice.png)";
+    }
+})
+  progressBar5.addEventListener('click', function (event) {
+    let coordStart = this.getBoundingClientRect().left
+    let coordEnd = event.pageX
+    let p = (coordEnd - coordStart) / this.offsetWidth
+    now5.style.width = p.toFixed(3) * 100 + '%'
+
+    audio5.currentTime = p * audio5.duration
+    audio5.pause()
+  })
+
+  setInterval(() => {
+    start5.innerHTML = conversion(audio5.currentTime)
+    now5.style.width = audio5.currentTime / audio5.duration.toFixed(3) * 100 + '%'
   }, 1000)

@@ -22,7 +22,7 @@ body {
   h1 {
     font-family: "Century Gothic";
     font-size: 15px;
-    color: aliceblue;
+    color: black;
     word-wrap: break-word;
   }
   .container-second{
@@ -107,10 +107,17 @@ body {
   margin-right: auto;
   background: linear-gradient(130deg, #532e0a, #3d0147, #54010f);
   background-size: 200% 200%;
-
+  overflow: hidden;
   -webkit-animation: Animation 3s ease infinite;
   -moz-animation: Animation 3s ease infinite;
   animation: Animation 3s ease infinite;
+  transition: .5s ease-in-out;
+  outline: 0px solid rgb(165, 0, 130);
+  outline-offset: 0px;
+}
+.player:hover{
+outline: 5px solid white;
+outline-offset: 10px;
 }
 @-webkit-keyframes Animation {
   0%{background-position:10% 0%}
@@ -139,14 +146,11 @@ body {
   border-radius: 33px;
   transition: .5s linear;
 }
-.playerimg:hover{
-  transform: scale(1.1);
-}
 .player .playpause{
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
-  margin-top: 10%;
+  margin-top: 5px;
   width: 125px;
   height: 125px;
   cursor: pointer;
@@ -430,4 +434,83 @@ body {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+.progress5{
+  display: flex;
+  width: 77%;
+  align-items: center;
+  margin-left: 70px;
+}
+.progress-bar5 {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #dcb7e4;
+  vertical-align: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.now5{
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 10px;
+  border-radius: 5px;
+  width: 60%;
+  background: #a016c0;
+}
+.playpausevoice5{
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  background-image: url(playvoice.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-left: 70px;
+  cursor: pointer;
+}
+.sender-photo5{
+  height: 60px;
+  position: absolute;
+  border-radius: 100%;
+  width: 60px;
+  background-image: url(kamil.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.player #photo-year{
+  height: 350px;
+  rotate: 25deg;
+  overflow: hidden;
+  margin-bottom:-80px;
+  margin-left: -60px;
+  margin-top: -670px;
+}
+.player #photo-gifts{
+  height: 500px;
+  overflow: hidden;
+  margin-left: -100px;
+  margin-bottom: -150px;
+  margin-top: -100px;
+}
+.text{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: auto;
+  width: 100%;
+  display: block;
+  padding: 5px 10px;
+  align-items: center;
+  background-color: white;
+  border-radius: 20px;
+  transition: .3s linear;
+  box-shadow: 0px 10px 15px -12px black;
+  opacity: 0;
+  filter: blur(10px);
+  animation: fade-in 1.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
 }

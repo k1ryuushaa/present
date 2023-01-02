@@ -11,7 +11,7 @@
 body {
     height: auto;
     margin: 0 auto;
-    height: 200%;
+    height: 220%;
     background: linear-gradient(130deg, #c47322, #921ea6, #b41f38);
     background-size: 200% 200%;
     -webkit-animation: Animation 7s ease infinite;
@@ -159,10 +159,9 @@ body {
   transform: scale(1.1);
 }
 .container{
-  margin: 10px;
-  border: 1px solid black;
+  margin: 0px;
   display:grid;
-  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
 }
 
 .voice-message-container{
